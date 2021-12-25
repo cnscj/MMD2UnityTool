@@ -31,11 +31,13 @@ public class CameraVmdAgent
 		string vmd_folder = Path.GetDirectoryName(_vmdFile);
 		string anima_file = Path.Combine(vmd_folder, animation_clip.name + ".anim");
 
-		if (!File.Exists(anima_file))
+		if (File.Exists(anima_file))
 			AssetDatabase.DeleteAsset(anima_file);
 
 		AssetDatabase.CreateAsset(animation_clip, anima_file);
 		
 		AssetDatabase.ImportAsset(AssetDatabase.GetAssetPath(animation_clip));
+
+		//AssetDatabase.Refresh();
 	}
 }
