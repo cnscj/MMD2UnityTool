@@ -42,11 +42,11 @@ namespace MMD
 
 				if (extension == ".pmd" || extension == ".pmx")
 				{
-					SetupScriptableObject<PMDScriptableObject>(path);
+					//SetupScriptableObject<PMDScriptableObject>(path);
 				}
 				else if (extension == ".vmd")
 				{
-					SetupScriptableObject<VMDScriptableObject>(path);
+					//SetupScriptableObject<VMDScriptableObject>(path);
 				}
 			}
 		}
